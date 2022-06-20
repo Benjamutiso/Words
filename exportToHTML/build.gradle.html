@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>build.gradle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+.s4 { color: #cc7832;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+build.gradle</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+ * Copyright (C) 2020 The Android Open Source Project 
+ * 
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at 
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0 
+ * 
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License. 
+ */</span>
+<span class="s1">plugins {</span>
+    <span class="s1">id </span><span class="s2">'com.android.application'</span>
+    <span class="s1">id </span><span class="s2">'kotlin-android'</span>
+    <span class="s1">id </span><span class="s2">'kotlin-kapt'</span>
+    <span class="s1">id </span><span class="s2">'androidx.navigation.safeargs.kotlin'</span>
+<span class="s1">}</span>
+
+<span class="s1">android {</span>
+    <span class="s1">compileSdkVersion </span><span class="s3">32</span>
+
+
+    <span class="s1">defaultConfig {</span>
+        <span class="s1">applicationId </span><span class="s2">&quot;com.example.wordsapp&quot;</span>
+        <span class="s1">minSdkVersion </span><span class="s3">19</span>
+        <span class="s1">targetSdkVersion </span><span class="s3">32</span>
+        <span class="s1">versionCode </span><span class="s3">1</span>
+        <span class="s1">versionName </span><span class="s2">&quot;1.0&quot;</span>
+
+        <span class="s1">testInstrumentationRunner </span><span class="s2">&quot;androidx.test.runner.AndroidJUnitRunner&quot;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">buildTypes {</span>
+        <span class="s1">release {</span>
+            <span class="s1">minifyEnabled </span><span class="s4">false</span>
+            <span class="s1">proguardFiles getDefaultProguardFile(</span><span class="s2">'proguard-android-optimize.txt'</span><span class="s1">), </span><span class="s2">'proguard-rules.pro'</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+    <span class="s1">compileOptions {</span>
+        <span class="s1">sourceCompatibility JavaVersion.VERSION_1_8</span>
+        <span class="s1">targetCompatibility JavaVersion.VERSION_1_8</span>
+    <span class="s1">}</span>
+
+    <span class="s1">kotlinOptions {</span>
+        <span class="s1">jvmTarget = </span><span class="s2">'1.8'</span>
+    <span class="s1">}</span>
+
+    <span class="s1">buildFeatures {</span>
+        <span class="s1">viewBinding = </span><span class="s4">true</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s1">dependencies {</span>
+    <span class="s1">implementation </span><span class="s2">&quot;androidx.core:core-ktx:</span><span class="s1">$core_ktx_version</span><span class="s2">&quot;</span>
+    <span class="s1">implementation </span><span class="s2">&quot;androidx.appcompat:appcompat:</span><span class="s1">$appcompat_version</span><span class="s2">&quot;</span>
+    <span class="s1">implementation </span><span class="s2">&quot;com.google.android.material:material:</span><span class="s1">$material_version</span><span class="s2">&quot;</span>
+    <span class="s1">implementation </span><span class="s2">&quot;androidx.constraintlayout:constraintlayout:</span><span class="s1">$constraintlayout_version</span><span class="s2">&quot;</span>
+    <span class="s1">implementation </span><span class="s2">'androidx.legacy:legacy-support-v4:1.0.0'</span>
+    <span class="s1">implementation </span><span class="s2">&quot;androidx.navigation:navigation-fragment-ktx:</span><span class="s1">$nav_version</span><span class="s2">&quot;</span>
+    <span class="s1">implementation </span><span class="s2">&quot;androidx.navigation:navigation-ui-ktx:</span><span class="s1">$nav_version</span><span class="s2">&quot;</span>
+
+<span class="s1">}</span></pre>
+</body>
+</html>
